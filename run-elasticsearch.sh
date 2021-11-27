@@ -103,18 +103,18 @@ do
       /bin/sh -vc "${PLUGIN_INSTALL_CMD} /usr/local/bin/docker-entrypoint.sh"
   fi
 done
-
-docker run \
-  --network elastic \
-  --rm \
-  appropriate/curl \
-  --max-time 120 \
-  --retry 120 \
-  --retry-delay 1 \
-  --retry-connrefused \
-  --show-error \
-  --silent \
-  http://es1:$PORT
+#
+#docker run \
+#  --network elastic \
+#  --rm \
+#  appropriate/curl \
+#  --max-time 120 \
+#  --retry 120 \
+#  --retry-delay 1 \
+#  --retry-connrefused \
+#  --show-error \
+#  --silent \
+#  http://es1:$PORT
 
 sleep 10
 
