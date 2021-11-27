@@ -11,7 +11,7 @@ fi
 PLUGIN_INSTALL_CMD=""
 PLUGINS_STR=`echo ${PLUGINS} | sed -e 's/\n/ /g'`
 if [ -n "${PLUGINS_STR}" ]; then
-  ARRAY=(${PLUGINS STR})
+  ARRAY=(${PLUGINS_STR})
   for i in "${ARRAY[@]}"
   do
     PLUGIN_INSTALL_CMD+= "elasticsearch-plugin install --batch ${i} && "
