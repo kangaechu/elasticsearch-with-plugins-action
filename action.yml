@@ -18,14 +18,6 @@ inputs:
     description: 'Elasticsearch plugin strings'
     required: false
     default: ''
-  port:
-    description: 'Port where you want to run Elasticsearch'
-    required: false
-    default: 9200
-  elasticsearch_password:
-    description: 'The password for the user elastic in your cluster'
-    required: false
-    default: 'changeme'
 
 runs:
   using: 'docker'
@@ -34,4 +26,3 @@ runs:
     STACK_VERSION: ${{ inputs.stack-version }}
     NODES: ${{ inputs.nodes }}
     PLUGINS: ${{ inputs.plugins }}
-    PORT: ${{ inputs.port }}
